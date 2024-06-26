@@ -1,11 +1,6 @@
 // Задание 1
 
-const checkLength = (string, length) => {
-  if (string.length <= length) {
-    return true;
-  }
-  return false;
-};
+const checkLength = (string, length) => string.length <= length;
 console.log(checkLength('проверяемая строка', 20)); // true
 console.log(checkLength('проверяемая строка', 18)); // true
 console.log(checkLength('проверяемая строка', 10)); // false
@@ -32,18 +27,16 @@ console.log(checkPalindrom('Лёша на полке клопа нашёл')); /
 
 // Задание 3
 
-/*
 
 const parseNumber = (string) => {
   let stringNumber = '';
   for (let i = 0; i < string.length; i++) {
-    if (parseInt(string[i], 10) !== 'NaN') {
-      stringNumber += parseInt(string[i], 10);
+    if (!Number.isNaN(Number(string[i])) && string[i] !== ' ') {
+      stringNumber += string[i];
     }
   }
   return stringNumber;
 };
 
-console.log(parseNumber('3222 какой то левый текст'));
-
-*/
+console.log(parseNumber('3222 какой - то левый текст')); // 3222
+console.log(parseNumber('3222 какой 777 то левый 34 текст')); // 322277734
