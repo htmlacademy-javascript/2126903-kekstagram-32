@@ -1,2 +1,3 @@
-import { photos } from './data';
-console.log(photos);
+import { generateThumbnail } from './thumbnails';
+import { createPhotos } from './data';
+generateThumbnail(createPhotos());
