@@ -64,12 +64,12 @@ const createArrayComments = () => Array.from({ length: getRandomArrayElement(com
 
 const createPhoto = () => ({
   id: createIdPhoto(),
-  url: `photos${getRandomArrayElement(urlCount)}.jpg`,
+  url: `./photos/${getRandomArrayElement(urlCount)}.jpg`,
   description: DESCRIPTION[getRandomInteger(0, DESCRIPTION.length - 1)],
   likes: getRandomArrayElement(likesCount),
   comments: createArrayComments()
 });
 
-const photos = Array.from({ length: PHOTO_COUNT }, createPhoto);
+const createPhotos = () => Array.from({ length: PHOTO_COUNT }, createPhoto);
 
-export { photos };
+export { createPhotos };
