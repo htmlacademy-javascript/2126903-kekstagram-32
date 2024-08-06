@@ -1,3 +1,5 @@
+import { photos } from './data';
 import { generateThumbnail } from './thumbnails';
-import { createPhotos } from './data';
-generateThumbnail(createPhotos());
+import './big-picture';
+
+generateThumbnail(photos);
